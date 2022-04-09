@@ -95,11 +95,113 @@
         background-color: $WHITE;
         @extend %dmsans-400;
     }
-
-
 }
 
+.footer-top {
+    padding: 80px 0;
+    border-bottom: 1px solid #dae4e9;
+    display: flex;
+    justify-content: space-between;
 
+    &__title {
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: $BLUE;
+        margin-bottom: 30px;
+        @extend %dmsans-700;
+    }
 
+    .top-footer__list-link,
+    &__addres,
+    &__phone,
+    &__email,
+    &__text {
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $ADD-GREY;
+    }
+
+    .footer-top__addres {
+        line-height: 28px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+    }
+
+    li+li,
+    a+a {
+        margin-top: 20px;
+    }
+
+    &__newsletter {
+        max-width: 270px;
+    }
+
+    &__text {
+        margin-bottom: 38px;
+    }
+
+    &__form {
+        display: flex;
+        @extend %dmsans-400;
+    }
+
+    &__form-input {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 13px 15px;
+        background-color: $ADD-LIGHT-BROWN;
+        border: none;
+        outline: none;
+        color: $ADD-DARK-BLUE;
+    }
+
+    &__form-input::placeholder {
+        color: #234969;
+    }
+
+    &__form-btn {
+        font-size: 14px;
+        line-height: 17px;
+        color: #fff;
+        background-color: $GREY;
+        cursor: pointer;
+        padding: 11px 15px;
+        border: none;
+    }
+}
+
+.footer-bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+
+    .footer-bot__copyriths-text,
+    .footer-bot__navigation-list-link {
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $ADD-GREY;
+    }
+
+    &__navigation-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__navigation-list-item {
+        padding: 2px 15px;
+    }
+
+    &__navigation-list-item+.footer-bot__navigation-list-item {
+        border-left: 1px solid $ADD-GREY;
+    }
+}
 
 @import 'media';
