@@ -361,6 +361,24 @@
 
 }
 
+.video {
+    position: relative;
+
+    &__popup {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__preview {
+        max-width: 1920px;
+        width: 100%;
+    }
+
+    &__link {
+        position: absolute;
+        bottom: 40%;
+    }
+}
 
 
 
