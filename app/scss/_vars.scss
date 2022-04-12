@@ -58,3 +58,28 @@ $grey-color: #edf1f4;
     font-family: 'Poppins-Bold', sans-serif;
     font-weight: 700;
 }
+
+%product-title {
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 35px;
+    color: $TITLE;
+}
+
+%filter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 380px;
+    width: 100%;
+    margin-bottom: 75px;
+}
+
+%filter-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 19px;
+    color: $ADD-LIGHT-BROWN2;
+}
