@@ -131,15 +131,10 @@
     }
 
     &__link {
-        display: flex;
-        justify-content: space-between;
         max-width: 200px;
-        padding: 24px 18px 23px 29px;
-        font-size: 15px;
-        line-height: 18px;
         color: #fff;
         background-color: $GREY;
-        @extend %rubik-500;
+        @extend %link-btn;
     }
 
     &__arrow {
@@ -237,9 +232,8 @@
 .products {
     background: linear-gradient($BG-LIGHT, $WHITE);
 
-
     .week {
-        padding: 75px 0 85px;
+        padding: 75px 0 185px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -268,9 +262,78 @@
         }
     }
 
+    .promo {
+        &__items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            background-color: $ADD-LIGHT-BROWN3;
+            max-height: 390px;
+            max-width: 870px;
+            width: 100%;
+            padding: 90px 0 90px 385px;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 230px;
+                height: 400px;
+                position: absolute;
+                bottom: 70px;
+                left: 135px;
+                background-size: cover;
+            }
+        }
+
+        &__item:nth-child(1)::before {
+            background-image: url('../images/products/promo/promo-1.png');  
+        }
+        &__item:nth-child(2)::before {
+            background-image: url('../images/products/promo/promo-2.png');
+            left: 125px;
+            bottom: 50px;
+        }
+
+
+        &__item-title {
+            font-size: 26px;
+            line-height: 32px;
+            color: $ADD-BLUE;
+            @extend %dmsans-700;
+            max-width: 250px;
+            margin-bottom: 25px;
+        }
+
+        &__item-text {
+            font-size: 16px;
+            line-height: 30px;
+            max-width: 335px;
+            margin-bottom: 30px;
+            color: $ADD-BLUE;
+            @extend %rubik-400;
+        }
+
+        &__item-link {
+            color: $DARK-BLUE;
+            border: 1px solid $ADD-GREY2;
+            max-width: 175px;
+            border-radius: 10px;
+            @extend %link-btn;
+        }
+
+        &__item-arrow {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+
     .design {
-
-
         &__inner {
             padding: 100px 0 120px;
             display: flex;
