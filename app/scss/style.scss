@@ -291,8 +291,9 @@
         }
 
         &__item:nth-child(1)::before {
-            background-image: url('../images/products/promo/promo-1.png');  
+            background-image: url('../images/products/promo/promo-1.png');
         }
+
         &__item:nth-child(2)::before {
             background-image: url('../images/products/promo/promo-2.png');
             left: 125px;
@@ -517,7 +518,23 @@
     }
 }
 
+.partners {
+    background-color: $ADD-LIGHT-BROWN;
+    padding: 250px 0 80px;
 
+    &__inner {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1050px;
+        width: 100%;
+        align-items: center;
+    }
+}
 
 
 .footer-top {
