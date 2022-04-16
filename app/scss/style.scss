@@ -257,7 +257,6 @@
         &__items {
             display: grid;
             grid-template-columns: repeat(4, 270px);
-            grid-template-rows: 380px 380px;
             grid-gap: 40px 30px;
         }
     }
@@ -423,6 +422,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
+    height: 380px;
 
     &__img-box {
         position: relative;
