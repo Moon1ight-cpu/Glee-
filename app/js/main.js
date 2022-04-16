@@ -1,5 +1,5 @@
 import { DOM } from './view.js';
-import { getListItems } from './functions.js';
+import { getListItems, getNewsList } from './functions.js';
 
 
 $(function () {
@@ -9,5 +9,6 @@ $(function () {
     })
 });
 
-DOM.WEEK_ITEMS.append(...getListItems())
+DOM.WEEK_ITEMS.append(...getListItems());
+DOM.NEWS_ITEMS.append(...getNewsList());
 

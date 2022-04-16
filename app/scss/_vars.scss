@@ -5,6 +5,7 @@ $ADD-LIGHT-GREY:#436372;
 $LIGHT-GREY: #edf1f4;
 $ADD-GREY: #7b7b7b;
 $ADD-GREY2:#b3b7b5;
+$ADD-GREY3:#e0e0e0;
 $LIGHT-BROWN: #fde7d3;
 $ADD-LIGHT-BROWN: #fef7f0; 
 $ADD-LIGHT-BROWN2: #8b8b8b;
@@ -16,6 +17,7 @@ $ADD-BLUE: #243f4d;
 $DARK-BLUE: #436372;
 $ADD-DARK-BLUE: #234969;
 $TITLE: #191919;
+$TEXT: #262626;
 $BG-LIGHT: #f9f9f9;
 
 $grey-add-color:#fbfbfb;
@@ -58,7 +60,6 @@ $grey-color: #edf1f4;
 %product-title {
     font-size: 36px;
     line-height: 43px;
-    margin-bottom: 35px;
     color: $TITLE;
 }
 
