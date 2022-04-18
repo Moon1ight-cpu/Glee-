@@ -1,3 +1,7 @@
+*:focus {
+    outline: dashed red 2px;
+}
+
 html,
 body {
     height: 100%;
@@ -16,4 +20,59 @@ body {
     max-width: 1800px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.small-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page-title {
+    padding: 30px 0;
+    background-color: $LIGHT-GREY;
+    text-align: center;
+
+    &__title {
+        font-style: 36px;
+        color: $DARK-BLUE2;
+        margin-bottom: 10px;
+        @extend %rubik-400;
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        font-size: 14px;
+        color: $ADD-GREY4;
+        @extend %rubik-400;
+        margin-right: 20px;
+        position: relative;
+
+        ::after {
+            content: '/';
+            position: absolute;
+            right: -12px;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid $ADD-GREY4;
+            margin-right: 0;
+
+            ::after {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        color: inherit;
+    }
 }

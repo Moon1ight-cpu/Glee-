@@ -1,30 +1,27 @@
 $WHITE: #FFF;
-
 $GREY : #a3bbc8;
 $DARK-GREY: #A3BBC8;
 $ADD-LIGHT-GREY:#436372;
 $LIGHT-GREY: #edf1f4;
 $ADD-GREY: #7b7b7b;
-
+$ADD-GREY2:#b3b7b5;
+$ADD-GREY3:#e0e0e0;
+$ADD-GREY4:#737980;
 
 $LIGHT-BROWN: #fde7d3;
-$ADD-LIGHT-BROWN: #fef7f0;
+$ADD-LIGHT-BROWN: #fef7f0; 
 $ADD-LIGHT-BROWN2: #8b8b8b;
+$ADD-LIGHT-BROWN3: #feefe2;
 $BROWN: #fcd7b6;
 $ADD-BROWN: #414141;
-
-
 $BLUE: #1f2044;
 $ADD-BLUE: #243f4d;
 $DARK-BLUE: #436372;
+$DARK-BLUE2: #222933;
 $ADD-DARK-BLUE: #234969;
-
 $TITLE: #191919;
+$TEXT: #262626;
 $BG-LIGHT: #f9f9f9;
-
-
-
-
 
 $grey-add-color:#fbfbfb;
 $grey-color: #edf1f4;
@@ -59,10 +56,13 @@ $grey-color: #edf1f4;
     font-weight: 700;
 }
 
+
+
+
+
 %product-title {
     font-size: 36px;
     line-height: 43px;
-    margin-bottom: 35px;
     color: $TITLE;
 }
 
@@ -82,4 +82,14 @@ $grey-color: #edf1f4;
     font-size: 16px;
     line-height: 19px;
     color: $ADD-LIGHT-BROWN2;
+}
+
+%link-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px 18px 23px 29px;
+    font-size: 15px;
+    line-height: 18px;
+    @extend %rubik-500;
 }
