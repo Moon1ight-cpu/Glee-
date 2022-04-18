@@ -9,6 +9,8 @@ $(function () {
     })
 });
 
-DOM.WEEK_ITEMS.append(...getListItems());
+if (location.href == 'http://localhost:3000/index.html') {
+    DOM.WEEK_ITEMS.append(...getListItems());
+}
 DOM.NEWS_ITEMS.append(...getNewsList());
 

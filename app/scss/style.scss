@@ -733,3 +733,47 @@
 }
 
 @import 'media';
+
+
+
+
+.info {
+    padding: 115px 0 0;
+    color: $ADD-BLUE;
+
+    &__title {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 10px;
+        @extend %rubik-500;
+
+        &:first-child {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+        margin-bottom: 65px !important;
+
+        .info__list-item+.info__list-item {
+            margin-top: 30px;
+        }
+    }
+
+    &__list-item {
+        font-size: 16px;
+        line-height: 30px;
+        @extend %rubik-400;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 65px;
+        @extend %rubik-400;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
