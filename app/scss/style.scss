@@ -1016,12 +1016,15 @@
     &__item:nth-child(1)::before {
         background-image: url(../images/icons/numbers-1.svg);
     }
+
     &__item:nth-child(2)::before {
         background-image: url(../images/icons/numbers-2.svg);
     }
+
     &__item:nth-child(3)::before {
         background-image: url(../images/icons/numbers-3.svg);
     }
+
     &__item:nth-child(4)::before {
         background-image: url(../images/icons/numbers-4.svg);
     }
@@ -1033,5 +1036,123 @@
 
     &__text {
         font-size: 18px;
+    }
+}
+
+.team {
+    padding: 120px 0 100px;
+
+    .small-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info-box {
+        max-width: 307px;
+        width: 100%;
+
+        .team__title {
+            font-size: 36px;
+            color: $ADD-BLUE;
+            margin-bottom: 35px;
+            @extend %dmsans-700;
+        }
+
+        .team__text {
+            font-size: 16px;
+            line-height: 30px;
+            color: $ADD-BLUE;
+            @extend %rubik-400;
+            margin-bottom: 40px;
+        }
+
+        .team__link {
+            max-width: 170px;
+            width: 100%;
+            color: $WHITE;
+            background-color: $GREY;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 26px 15px 18px;
+            border-radius: 5px;
+            font-size: 15px;
+            line-height: 18px;
+            @extend %poppins-700;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: 370px 370px;
+        gap: 95px 30px;
+    }
+
+    &__item {
+        position: relative;
+
+        .team__photo-box {
+            height: 320px;
+        }
+
+        .team__item-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;	
+        }
+
+        .team__item-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 110px;
+            padding: 0 20px 0 24px;
+            position: absolute;
+            max-width: 325px;
+            width: 100%;
+            bottom: -65px;
+            background-color: $WHITE;
+            box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+        }
+
+        .team__item-name {
+            font-size: 22px;
+            line-height: 26px;
+            margin-bottom: 5px;
+            color: $DARK-BLUE;
+            @extend %dmsans-700;
+        }
+
+        .team__item-position {
+            font-size: 16px;
+            line-height: 19px;
+            color: $ADD-GREY6;
+            @extend %rubik-400;
+        }
+
+
+        .team__social {
+            display: flex;
+            justify-content: space-between;
+            width: 90px;
+            height: 40px;
+        }
+
+        .team__social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $BG-LIGHT2;
+        }
+
+        .team__social-inst {
+            background: $BG-LIGHT2 url(../images/icons/inst.svg) no-repeat center center;
+        }
+
+        .team__social-google {
+            background: $BG-LIGHT2 url(../images/icons/google+.svg) no-repeat center center;
+        }
     }
 }
