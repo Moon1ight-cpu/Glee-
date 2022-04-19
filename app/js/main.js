@@ -9,7 +9,8 @@ $(function () {
     })
 });
 
-if (location.href == 'http://localhost:3000/index.html') {
+
+if (location.href == 'http://localhost:3000/index.html' || location.href == 'http://localhost:3000/') {
     DOM.WEEK_ITEMS.append(...getListItems());
 }
 DOM.NEWS_ITEMS.append(...getNewsList());
