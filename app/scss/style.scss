@@ -745,7 +745,7 @@
 
 
 
-
+/*----------------------------------- Conditions-------------------------------- */
 .info {
     padding: 115px 0 0;
     color: $ADD-BLUE;
@@ -787,6 +787,7 @@
     }
 }
 
+/*----------------------------------- Login-------------------------------- */
 .login {
     padding: 115px 0;
 
@@ -873,5 +874,164 @@
             border: 2px solid $GREY;
             @extend %rubik-500;
         }
+    }
+}
+
+/*----------------------------------- About-------------------------------- */
+.years {
+    padding: 125px 0;
+
+    .small-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        max-width: 570px;
+        width: 100%;
+        padding-top: 70px;
+        overflow: hidden;
+    }
+
+    &__box {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 35px;
+
+        &-years {
+            font-size: 140px;
+            line-height: 125px;
+            color: $GREY;
+            @extend %rubik-500;
+            padding-right: 28px;
+        }
+
+        &-text {
+            font-size: 16px;
+            color: $ADD-BLUE;
+            @extend %rubik-400;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        color: $ADD-BLUE;
+        margin-bottom: 40px;
+        @extend %dmsans-700;
+    }
+
+    &__text {
+        font-size: 16px;
+        color: $ADD-BLUE;
+        max-width: 555px;
+        padding-bottom: 60px;
+        border-bottom: 2px solid #e6eaf0;
+        @extend %rubik-400;
+    }
+
+    &__items {
+        display: flex;
+        padding-top: 30px;
+        margin-left: -30px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+        width: 100%;
+        padding: 0 35px 0 90px;
+        position: relative;
+        @extend %dmsans-700;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            left: 30px;
+            top: 15px;
+            background-size: cover;
+        }
+
+        &-numbers {
+            font-size: 36px;
+            color: $ADD-BLUE;
+        }
+
+        &-text {
+            font-size: 16px;
+            color: $ADD-GREY5;
+        }
+    }
+
+    &__item:nth-child(1)::before {
+        background: url(../images/icons/years-1.svg) no-repeat;
+    }
+
+    &__item:nth-child(2)::before {
+        background: url(../images/icons/years-2.svg) no-repeat;
+    }
+
+    &__item:nth-child(3)::before {
+        background: url(../images/icons/years-3.svg) no-repeat;
+    }
+
+    .years__item+.years__item {
+        border-left: 1px solid #e6eaf0;
+    }
+}
+
+.numbers {
+    padding: 165px 0 80px;
+    background-color: $BROWN;
+
+    &__items {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__item {
+        max-width: 170px;
+        width: 100%;
+        text-align: center;
+        color: $ADD-BLUE;
+        @extend %dmsans-700;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 140px;
+            height: 75px;
+            position: absolute;
+            left: 15px;
+            top: -80px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+        }
+    }
+
+    &__item:nth-child(1)::before {
+        background-image: url(../images/icons/numbers-1.svg);
+    }
+    &__item:nth-child(2)::before {
+        background-image: url(../images/icons/numbers-2.svg);
+    }
+    &__item:nth-child(3)::before {
+        background-image: url(../images/icons/numbers-3.svg);
+    }
+    &__item:nth-child(4)::before {
+        background-image: url(../images/icons/numbers-4.svg);
+    }
+
+    &__numbers {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 18px;
     }
 }
