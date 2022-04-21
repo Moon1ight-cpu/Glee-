@@ -1,4 +1,4 @@
-import { DOM, WEEK_PRODUCTS, NEWS } from './view.js';
+import { DOM, WEEK_PRODUCTS, NEWS, BRANDS } from './view.js';
 
 
 
@@ -11,19 +11,19 @@ function createItem(item) {
     div.querySelector('.item__img').src = item.image;
     div.querySelector('.item__title').textContent = item.name;
     div.querySelector('.item__price').textContent = item.price;
+    div.querySelector('.item__text').textContent = item.text;
     return div;
 }
-export function getListItems() {
+export function getListItems(array) {
     let result = [];
 
-    for (let i = 0; i < WEEK_PRODUCTS.length; i++) {
-        let item = createItem(WEEK_PRODUCTS[i]);
+    for (let i = 0; i < array.length; i++) {
+        let item = createItem(array[i]);
         result.push(item);
     }
 
     return result;
 }
-
 
 
 
@@ -49,3 +49,16 @@ export function getNewsList() {
 
     return result;
 }
+
+
+
+
+
+export function addBrandAmount(array) {
+
+    for (let index = 0; index < array.length; index++) {
+        const element = `(${array[index].length})`;
+        DOM.BRANDS_SPANS[index].append(element);
+    }
+}
+
