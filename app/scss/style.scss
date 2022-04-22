@@ -428,6 +428,7 @@
     height: 380px;
     margin-bottom: 40px;
     margin-right: 30px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
 
     &.item--list {
         flex-direction: row;
@@ -467,6 +468,7 @@
             padding-top: 85px;
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
             min-height: 100%;
         }
 
@@ -572,6 +574,11 @@
         }
     }
 
+    .item__infobox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &__title {
         margin-bottom: 10px;
@@ -1276,7 +1283,6 @@
 /*----------------------------------- Shop-------------------------------- */
 .shop {
     padding: 120px 0;
-    background-color: $BG-LIGHT;
 
     &__inner {
         display: flex;
@@ -1423,9 +1429,6 @@
 
 
 
-
-
-
     .shop-content {
         max-width: 870px;
         width: 100%;
@@ -1462,8 +1465,38 @@
         &__items {
             display: flex;
             flex-wrap: wrap;
+            margin-bottom: 70px;
         }
     }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+    }
+
+    &__link {
+        color: red;
+        border: 1px solid $GREY;
+        padding: 16px 20px;
+        font-size: 16px;
+        color: $ADD-BLUE;
+        @extend %rubik-400;
+    }
+
+    &__link--active {
+        color: $WHITE;
+        background-color: $GREY;
+    }
+
+    .pagination__item+.pagination__item {
+        margin-left: 15px;
+    }
+
+
 }
 
 .irs {
@@ -1500,6 +1533,228 @@
         border-radius: 5px;
     }
 }
+
+/*----------------------------------- Contact-------------------------------- */
+
+.contact {
+    padding: 120px 0 10px;
+
+    &__subtitle {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: $GREY;
+        @extend %poppins-700;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 70px;
+        font-size: 35px;
+        color: #436372;
+        @extend %dmsans-700;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 120px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 215px 0 80px 0;
+        max-width: 370px;
+        width: 100%;
+        background-color: #fbfbfb;
+
+        &:nth-of-type(2) {
+            border: 2px solid $GREY;
+        }
+    }
+
+    &__item::before {
+        content: '';
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        border-radius: 20px;
+        top: 65px;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    }
+
+    &__item:nth-of-type(1):before {
+        background-image: url(../images/icons/contact/item-1.svg);
+    }
+
+    &__item:nth-of-type(2):before {
+        background-color: $GREY;
+        background-image: url(../images/icons/contact/item-2.svg);
+    }
+
+    &__item:nth-of-type(3):before {
+        background-image: url(../images/icons/contact/item-3.svg);
+    }
+
+    &__item-title {
+        font-size: 20px;
+        color: #222222;
+        margin-bottom: 25px;
+        @extend %dmsans-700;
+    }
+
+    &__item a,
+    &__item span {
+        font-size: 16px;
+        color: #565872;
+        @extend %rubik-400;
+    }
+
+    .contact__item-address {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact__item-address-text {
+        display: block;
+    }
+
+    .contact__item-address-text,
+    .contact__email,
+    .contact__phone {
+        margin-bottom: 15px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__formbox {
+        max-width: 620px;
+        width: 100%;
+    }
+
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            background: url(../images/icons/contact/form-1.svg) no-repeat center center;
+            top: -22px;
+            left: 230px;
+        }
+
+        &::before {
+            content: '';
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            background: url(../images/icons/contact/form-2.svg) no-repeat center center;
+            top: -22px;
+            right: -10px;
+            z-index: 2;
+        }
+    }
+
+    &__input {
+        background-color: #fafafa;
+        padding: 10px 40px 10px 20px;
+        border: none;
+        max-width: 300px;
+        width: 100%;
+        position: relative;
+
+        &::placeholder {
+            font-size: 16px;
+            color: #565872;
+            @extend %rubik-400;
+        }
+    }
+
+    &__input-name::after {
+        position: absolute;
+
+    }
+
+    &__input-email::after {
+        position: absolute;
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 170px;
+        resize: none;
+        padding: 15px 40px 15px 20px;
+        background-color: #fafafa;
+        border: none;
+        margin-bottom: 30px;
+
+        &::placeholder {
+            font-size: 16px;
+            color: #565872;
+            @extend %rubik-400;
+        }
+    }
+
+
+    &__btn {
+        text-transform: uppercase;
+        position: relative;
+        color: $WHITE;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: $GREY;
+        display: flex;
+        max-width: 200px;
+        width: 100%;
+        padding: 16px 0;
+        font-size: 15px;
+        @extend %poppins-700;
+
+        &::before {
+            content: '';
+            width: 80px;
+            height: 80px;
+            background: url(../images/icons/contact/form-3.svg) no-repeat center center;
+            position: absolute;
+            top: -216px;
+            right: -429px;
+        }
+    }
+
+    &__map {
+        height: 330px;
+        width: 500px;
+    }
+
+    #map {
+        height: 330px;
+        width: 500px;
+    }
+
+
+}
+
+
+
+
+
 
 
 @import 'media';

@@ -58,7 +58,10 @@ try {
         DOM.WEEK_ITEMS.append(...getListItems(WEEK_PRODUCTS));
     }
 
-    if (location.href == 'http://localhost:3000/index.html' || location.href == 'http://localhost:3000/' || location.href == 'http://localhost:3000/about.html') {
+    if (location.href == 'http://localhost:3000/index.html' ||
+        location.href == 'http://localhost:3000/' ||
+        location.href == 'http://localhost:3000/about.html' ||
+        location.href == 'http://localhost:3000/contact.html') {
         DOM.NEWS_ITEMS.append(...getNewsList());
     }
 
