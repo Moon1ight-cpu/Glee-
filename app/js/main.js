@@ -52,6 +52,18 @@ $(function () {
 
 
 
+for (let i = 0; i < DOM.BRANDS_BUTTONS.length; i++) {
+    DOM.BRANDS_BUTTONS[i].addEventListener('click', function () {
+        DOM.SHOP_ITEMS.innerHTML = '';
+        DOM.SHOP_ITEMS.append(...getListItems(BRANDS[i]));
+        for (let l = 0; l < DOM.BRANDS_ITEMS.length; l++) {
+            DOM.BRANDS_ITEMS[l].classList.remove('filter__brand-item--active')
+        }
+        DOM.BRANDS_ITEMS[i].classList.add('filter__brand-item--active')
+    })
+}
+
+
 
 try {
     if (location.href == 'http://localhost:3000/index.html' || location.href == 'http://localhost:3000/') {

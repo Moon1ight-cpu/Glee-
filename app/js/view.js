@@ -4,7 +4,10 @@ export const DOM = {
     SHOP_ITEMS: document.querySelector('.shop-content__items'),
     ITEM_TEMPLATE: document.querySelector('#item-template'),
     NEWS_TEMPLATE: document.querySelector('#articles-item'),
-    BRANDS_SPANS: document.querySelectorAll('.filter__brand-amount')
+    
+    BRANDS_SPANS: document.querySelectorAll('.filter__brand-amount'),
+    BRANDS_BUTTONS: document.querySelectorAll('.filter__brand-btn'),
+    BRANDS_ITEMS: document.querySelectorAll('.filter__brand-item'),
 }
 
 export const WEEK_PRODUCTS = [
